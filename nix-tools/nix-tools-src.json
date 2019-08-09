@@ -1,7 +1,7 @@
 {
   "url": "https://github.com/michaelpj/nix-tools",
-  "rev": "2dff669bb946b4ddae0ec1ec226a86e93c6a7ef1",
-  "date": "2019-07-31T15:09:19+01:00",
-  "sha256": "1wqjpdwgbdqz1ls7hk5i549rr1b0b4gczsj6825y24a9i5g3i9c9",
+  "rev": "dee285ce4cef236e21cd95f8b7022d5f20da2aab",
+  "date": "2019-08-02T10:46:16+01:00",
+  "sha256": "19r5an3hrjn1a4mm2n0fhaa5b1fi975pyjcisbnrhwfajlqb362f",
   "fetchSubmodules": false
 }

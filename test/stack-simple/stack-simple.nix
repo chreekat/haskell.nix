@@ -15,15 +15,25 @@
       buildType = "Simple";
       };
     components = {
-      "library" = { depends = [ (hsPkgs.base) ]; };
+      "library" = {
+        depends = [
+          (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+          ];
+        };
       exes = {
         "stack-simple-exe" = {
-          depends = [ (hsPkgs.base) (hsPkgs.stack-simple) ];
+          depends = [
+            (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+            (hsPkgs."stack-simple" or (builtins.throw "The Haskell package set does not contain the package: stack-simple (build dependency)"))
+            ];
           };
         };
       tests = {
         "stack-simple-test" = {
-          depends = [ (hsPkgs.base) (hsPkgs.stack-simple) ];
+          depends = [
+            (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+            (hsPkgs."stack-simple" or (builtins.throw "The Haskell package set does not contain the package: stack-simple (build dependency)"))
+            ];
           };
         };
       };

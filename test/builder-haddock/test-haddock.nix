@@ -14,5 +14,12 @@
       description = "";
       buildType = "Simple";
       };
-    components = { "library" = { depends = [ (hsPkgs.base) (hsPkgs.stm) ]; }; };
+    components = {
+      "library" = {
+        depends = [
+          (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+          (hsPkgs."stm" or (builtins.throw "The Haskell package set does not contain the package: stm (build dependency)"))
+          ];
+        };
+      };
     } // rec { src = (pkgs.lib).mkDefault ./.; }

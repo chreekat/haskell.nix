@@ -15,7 +15,18 @@
       buildType = "Simple";
       };
     components = {
-      "library" = { depends = [ (hsPkgs.base) ]; };
-      exes = { "project" = { depends = [ (hsPkgs.base) (hsPkgs.project) ]; }; };
+      "library" = {
+        depends = [
+          (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+          ];
+        };
+      exes = {
+        "project" = {
+          depends = [
+            (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+            (hsPkgs."project" or (builtins.throw "The Haskell package set does not contain the package: project (build dependency)"))
+            ];
+          };
+        };
       };
     } // rec { src = (pkgs.lib).mkDefault ../.; }

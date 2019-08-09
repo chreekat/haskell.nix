@@ -58,7 +58,7 @@
         "vector".flags.internalchecks = false;
         "vector".flags.wall = false;
         "vector".flags.boundschecks = true;
-        "call-stack".revision = (((hackage."call-stack")."0.1.0").revisions).default;
+        "call-stack".revision = (((hackage."call-stack")."0.2.0").revisions).default;
         "primitive".revision = (((hackage."primitive")."0.7.0.0").revisions).default;
         "profunctors".revision = (((hackage."profunctors")."5.4").revisions).default;
         "tagged".revision = (((hackage."tagged")."0.8.6").revisions).default;

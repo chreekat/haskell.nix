@@ -16,8 +16,8 @@
         "deepseq".revision = (((hackage."deepseq")."1.4.3.0").revisions).default;
         "random".revision = (((hackage."random")."1.1").revisions).default;
         "uuid-types".revision = (((hackage."uuid-types")."1.0.3").revisions).default;
-        "optparse-applicative".revision = (((hackage."optparse-applicative")."0.14.3.0").revisions).default;
-        "dlist".revision = (((hackage."dlist")."0.8.0.6").revisions).default;
+        "optparse-applicative".revision = (((hackage."optparse-applicative")."0.15.0.0").revisions).default;
+        "dlist".revision = (((hackage."dlist")."0.8.0.7").revisions).default;
         "semigroups".revision = (((hackage."semigroups")."0.19").revisions).default;
         "semigroups".flags.bytestring = true;
         "semigroups".flags.unordered-containers = true;

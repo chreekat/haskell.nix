@@ -15,6 +15,11 @@
       buildType = "Simple";
       };
     components = {
-      "library" = { depends = [ (hsPkgs.base) (hsPkgs.lens) ]; };
+      "library" = {
+        depends = [
+          (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+          (hsPkgs."lens" or (builtins.throw "The Haskell package set does not contain the package: lens (build dependency)"))
+          ];
+        };
       };
     } // rec { src = (pkgs.lib).mkDefault ../.; }

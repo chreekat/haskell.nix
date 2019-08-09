@@ -15,17 +15,28 @@
       buildType = "Simple";
       };
     components = {
-      "library" = { depends = [ (hsPkgs.base) (hsPkgs.slib) ]; };
+      "library" = {
+        depends = [
+          (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+          (hsPkgs."slib" or (builtins.throw "The Haskell package set does not contain the package: slib (build dependency)"))
+          ];
+        };
       sublibs = {
-        "slib" = { depends = [ (hsPkgs.extra) (hsPkgs.safe) (hsPkgs.aeson) ]; };
+        "slib" = {
+          depends = [
+            (hsPkgs."extra" or (builtins.throw "The Haskell package set does not contain the package: extra (build dependency)"))
+            (hsPkgs."safe" or (builtins.throw "The Haskell package set does not contain the package: safe (build dependency)"))
+            (hsPkgs."aeson" or (builtins.throw "The Haskell package set does not contain the package: aeson (build dependency)"))
+            ];
+          };
         };
       exes = {
         "cabal-sublib" = {
           depends = [
-            (hsPkgs.base)
-            (hsPkgs.cabal-sublib)
-            (hsPkgs.extra)
-            (hsPkgs.optparse-applicative)
+            (hsPkgs."base" or (builtins.throw "The Haskell package set does not contain the package: base (build dependency)"))
+            (hsPkgs."cabal-sublib" or (builtins.throw "The Haskell package set does not contain the package: cabal-sublib (build dependency)"))
+            (hsPkgs."extra" or (builtins.throw "The Haskell package set does not contain the package: extra (build dependency)"))
+            (hsPkgs."optparse-applicative" or (builtins.throw "The Haskell package set does not contain the package: optparse-applicative (build dependency)"))
             ];
           };
         };

@@ -38,7 +38,7 @@
         "parallel".revision = (((hackage."parallel")."3.2.2.0").revisions).default;
         "deepseq".revision = (((hackage."deepseq")."1.4.3.0").revisions).default;
         "random".revision = (((hackage."random")."1.1").revisions).default;
-        "optparse-applicative".revision = (((hackage."optparse-applicative")."0.14.3.0").revisions).default;
+        "optparse-applicative".revision = (((hackage."optparse-applicative")."0.15.0.0").revisions).default;
         "network".revision = (((hackage."network")."3.1.0.1").revisions).default;
         "async".revision = (((hackage."async")."2.2.2").revisions).default;
         "async".flags.bench = false;
@@ -74,7 +74,7 @@
         "vector".flags.internalchecks = false;
         "vector".flags.wall = false;
         "vector".flags.boundschecks = true;
-        "call-stack".revision = (((hackage."call-stack")."0.1.0").revisions).default;
+        "call-stack".revision = (((hackage."call-stack")."0.2.0").revisions).default;
         "primitive".revision = (((hackage."primitive")."0.7.0.0").revisions).default;
         "profunctors".revision = (((hackage."profunctors")."5.4").revisions).default;
         "ansi-terminal".revision = (((hackage."ansi-terminal")."0.9.1").revisions).default;
@@ -108,7 +108,7 @@
         "ansi-wl-pprint".revision = (((hackage."ansi-wl-pprint")."0.6.9").revisions).default;
         "ansi-wl-pprint".flags.example = false;
         "StateVar".revision = (((hackage."StateVar")."1.2").revisions).default;
-        "typed-process".revision = (((hackage."typed-process")."0.2.5.0").revisions).default;
+        "typed-process".revision = (((hackage."typed-process")."0.2.6.0").revisions).default;
         "contravariant".revision = (((hackage."contravariant")."1.5.2").revisions).default;
         "contravariant".flags.semigroups = true;
         "contravariant".flags.tagged = true;
@@ -151,7 +151,7 @@
         "base-orphans".revision = (((hackage."base-orphans")."0.8.1").revisions).default;
         "th-abstraction".revision = (((hackage."th-abstraction")."0.3.1.0").revisions).default;
         "array".revision = (((hackage."array")."0.5.2.0").revisions).default;
-        "conduit-extra".revision = (((hackage."conduit-extra")."1.3.3").revisions).default;
+        "conduit-extra".revision = (((hackage."conduit-extra")."1.3.4").revisions).default;
         "integer-gmp".revision = (((hackage."integer-gmp")."1.0.2.0").revisions).default;
         };
       compiler = {
